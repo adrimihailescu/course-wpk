@@ -11,7 +11,7 @@ module.exports = {
 		path: path.resolve(__dirname, "./dist"),
 		publicPath: "",
 	},
-	mode: "none",
+	mode: "production",
 	module: {
 		rules: [
 			{
@@ -55,7 +55,7 @@ module.exports = {
 	plugins: [
 		new TerserPlugin(),
 		new MiniCssExtractPlugin({
-			filename: "styles[contenthash].css",
+			filename: "styles.[contenthash].css",
 		}),
 		new CleanWebpackPlugin({
 			cleanOnceBeforeBuildPatterns: [
